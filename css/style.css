@@ -26,6 +26,47 @@ h2 {
   clear: both;
 }
 
+.sprite {
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.sprite-cart-icon {
+  width: 15px;
+  height: 15px;
+  background-position: -5px -5px;
+}
+
+.sprite-fb-icon {
+  width: 12px;
+  height: 22px;
+  background-position: -5px -30px;
+}
+
+.sprite-insta-icon {
+  width: 21px;
+  height: 21px;
+  background-position: -5px -62px;
+}
+
+.sprite-vk-icon {
+  width: 26px;
+  height: 15px;
+  background-position: -5px -93px;
+}
+
+
+.main-footer {
+  padding-top: 75px;
+}
+
+.footer-social {
+  float: left;
+  padding-right: 140px;
+  width: 260px;
+}
+
 .container {
   width: 1160px;
   margin: 0 auto;
@@ -34,13 +75,20 @@ h2 {
 .main-navigation {
   font-size: 0;
   width: 1160px;
-  outline: 3px solid green;
 }
 
 .logo-menu-link {
   display: inline-block;
   width: 160px;
   height: 65px;
+}
+
+.logo-menu-link:hover {
+  opacity: 0.8;
+}
+
+.logo-menu-link:active {
+  opacity: 0.3;
 }
 
 .menu {
@@ -55,14 +103,52 @@ h2 {
 .menu-item {
   display: inline-block;
   width: 110px;
-  font-size: 16px;
 }
+
+.menu-link{
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.menu-link:hover {
+  color: #fb565a;
+}
+
+.menu-link:active {
+  color: #000000;
+  opacity: 0.3;
+}
+
 
 .basket {
   display: inline-block;
-  width: 160px;
   vertical-align: middle;
+  text-align: right;
+  width: 160px;
   font-size: 16px;
+}
+
+.cart {
+  position: relative;
+  width: 160px;
+}
+
+.cart::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  right: 100px;
+  transform: translate(-50%, -50%);
+  background: url("../img/spritesheet.png") no-repeat;
+  background-position: -5px -5px;
+  opacity: 0.3;
 }
 
 .main-title-catalog {
@@ -74,6 +160,69 @@ h2 {
 
 .slider {
   width: 1160px;
+}
+
+.btn {
+  display: inline-block;
+  font-family: "Roboto";
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #fb565a;
+
+}
+
+.btn-slide {
+  padding: 18px 53px;
+}
+
+.btn-slide:hover {
+  background: #e74246;
+}
+
+.btn-slide:active {
+  background: #d7373b;
+}
+
+.btn-features-1 {
+  padding: 18px 40px;
+}
+
+.btn-features-1:hover {
+  background: #e74246;
+}
+
+.btn-features-1:active {
+  background: #d7373b;
+}
+
+.btn-features-2 {
+  padding: 18px 40px;
+  background: #00ca74;
+}
+
+.btn-features-2:hover {
+  background: #00bc6c;
+}
+
+.btn-features-2:active {
+  background: #00aa62;
+}
+
+.btn-features-3 {
+  padding: 18px 40px;
+  background: #efc84a;
+}
+
+.btn-features-3:hover {
+  background: #eab534;
+}
+
+.btn-features-3:active {
+  background: #e5a722;
 }
 
 .features {
@@ -178,6 +327,8 @@ h2 {
   width: 290px;
   height: 180px;
   background: white url("../img/map.jpg") no-repeat center;
+  opacity: 0.2;
+
 }
 
 .htmlacademy {
@@ -185,15 +336,23 @@ h2 {
 }
 
 .bardershop {
-  background: white url("../img/bardershop-logo.jpg") no-repeat center;
+  background: white url("../img/bardershop-logo.png") no-repeat center;
 }
 
 .pink {
-  background: white url("../img/pink-logo.jpg") no-repeat center;
+  background: white url("../img/pink-logo.png") no-repeat center;
 }
 
 .mishka {
-  background: white url("../img/mishka-logo.jpg") no-repeat center;
+  background: white url("../img/mishka-logo.png") no-repeat center;
+}
+
+.logo:hover {
+  opacity: 1;
+}
+
+.logo:active {
+  opacity: 0.1;
 }
 
 .form {
@@ -297,8 +456,54 @@ h2 {
 }
 
 .social-btn {
-  width: 80px;
-  padding-right: 15px;
+  display: inline-block;
+  position: relative;
+  width: 79px;
+  height: 79px;
+  margin-right: 7px;
+  font-size: 0;
+  border-radius: 50%;
+  background: #e1e1e1;
+}
+
+.social-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url("../img/spritesheet.png") no-repeat;
+}
+
+.social-btn-vk::before {
+  width: 26px;
+  height: 15px;
+  background-position: -5px -93px;
+}
+
+.social-btn-fb::before{
+  width: 12px;
+  height: 22px;
+  background-position: -5px -30px;
+}
+
+.social-btn-inst::before {
+  width: 21px;
+  height: 21px;
+  background-position: -5px -62px;
+}
+
+.social-btn:last-child {
+  margin-right: 0;
+}
+
+.social-btn:hover {
+  background: #e74246;
+}
+
+.social-btn:active {
+  background: #d7373b;
+  opacity: 0.3;
 }
 
 .footer-text {
