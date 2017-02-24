@@ -10,7 +10,7 @@
     <header class="main-header">
       <div class="container">
         <nav class="main-navigation">
-          <a class="logo-menu-link menu" href="index.html">
+          <a class="logo-menu-link" href="index.html">
             <img class="index-logo" src="img/nerds-logo.png" width="160" height="65" alt="Nerds">
           </a>
           <ul class="menu">
@@ -20,7 +20,7 @@
             <li class="menu-item">
               <a class="menu-link" href="#">Клиенты</a>
             </li>
-            <li class="menu-item">
+            <li class="menu-item active">
               <a class="menu-link" href="#">Магазин</a>
             </li>
             <li class="menu-item">
@@ -28,7 +28,7 @@
             </li>
           </ul>
           <div class="basket">
-            <a class="menu-link" href="#">Корзина</a>
+            <a class="cart" href="#">Корзина</a>
           </div>
         </nav>
         <h1 class="main-title-catalog">Магазин готовых шаблонов</h1>
@@ -37,34 +37,25 @@
     <main>
       <div class="container clearfix">
         <form class="form" action="#" method="post" name="features">
-          <div class="form-slider">
-            <h2 class="slider-title slider-title-price">Стоимость:</h2>
-            <div class="slider-price">
-              <div class="toggle">
-              </div>
-              <div class="toggle">
-              </div>
-              <div class="bar-scale">
-              </div>
-              <div class="bar-scale">
-              </div>
+          <h2 class="slider-title slider-title-price">Стоимость:</h2>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
             </div>
-            <div class="range clearfix">
-              <div class="range-item">
-                <label for="range-from">от</label>
-                <input class="range-item-input" type="text" name="price-from" id="range-from">
-              </div>
-              <div class="range-item">
-                <label for="range-to">до</label>
-                <input class="range-item-input" type="text" name="price-to" id="range-to">
-              </div>
+            <div class="price-controls">
+              <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+              <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
             </div>
           </div>
           <div class="slider-network">
             <h2 class="slider-title">Сетка:</h2>
             <div class="network-slide">
               <input type="radio" name="network" id="slide-1" value="adaptive" checked>
-              <label class="slider-text" for="slide-1">Адаптивная</label>
+              <label class="slider-text" for="slide-1"><span class="radio-indicator"></span>Адаптивная</label>
             </div>
             <div class="network-slide">
               <input type="radio" name="network" id="slide-2" value="fixed">
