@@ -73,13 +73,19 @@ h2 {
 }
 
 .main-header {
+  padding-top: 50px;
   background: #eeeeee;
+}
+
+.header {
+  padding-top: 50px;
+  background: #eeeeee;
+  margin-bottom: 55px;
 }
 
 .container {
   width: 1160px;
   margin: 0 auto;
-  padding-top: 50px;
 }
 
 .main-navigation {
@@ -112,9 +118,23 @@ h2 {
   list-style: none;
 }
 
+.menu-active {
+  position: relative;
+  background-color: none;
+}
+
+.menu-active::after {
+  content: "";
+  position: absolute;
+  right: 25px;
+  bottom: 0;
+  left: 25px;
+  height: 2px;
+  background-color: #fb565a;
+}
+
 .menu-item {
   display: inline-block;
-
 }
 
 .menu-link{
@@ -564,7 +584,6 @@ h2 {
 
 .slider-title-price {
   margin: 0;
-  margin-top: 60px;
   margin-bottom: 55px;
 }
 
@@ -642,32 +661,6 @@ h2 {
   border: none;
   border-radius: 3px;
   background: #eeeeee;
-}
-
-.catalog {
-  float: right;
-  width: 760px;
-}
-
-.active {
-  position: relative;
-  background-color: none;
-}
-
-.active::after {
-  content: "";
-  position: absolute;
-  right: 25px;
-  bottom: 0;
-  left: 25px;
-  height: 2px;
-  background-color: #fb565a;
-}
-
-.title-2 {
-  float: left;
-  width: 160px;
-  margin: 0;
 }
 
 .slider-network {
@@ -793,14 +786,43 @@ input[type="checkbox"]:checked + label::after {
   box-shadow: inset 0 3px 0 0 #bfbfbf;
 }
 
-
-.separate {
-  padding-top: 60px;
-  padding-bottom: 55px;
+.catalog {
+  float: right;
+  width: 760px;
 }
 
+.separate {
+  margin-bottom: 55px;
+  font-size: 0;
+  line-height: 0;
+}
+
+.title-2 {
+  display: inline-block;
+  width: 160px;
+  margin: 0;
+
+}
+
+
 .separate-item {
-  float: right;
+  display: inline-block;
+
+}
+
+.separate-link {
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 18px;
+  color: #b2b2b2;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+}
+
+.separate-sort {
+  display: inline-block;
 }
 
 .layout {
@@ -853,7 +875,7 @@ input[type="checkbox"]:checked + label::after {
 
 .info {
   margin: 0;
-  display: non;
+  display: none;
   text-align: center;
   position: absolute;
   left: 0;
@@ -904,16 +926,20 @@ input[type="checkbox"]:checked + label::after {
 
 .next-btn {
   display: inline-block;
-  width: 50px;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 50px;
+  min-width: 30px;
   height: 50px;
   margin-right: 11px;
-  padding: 0;
+  padding: 0 10px;
   color: #000000;
   background-color: #eeeeee;
 }
 
 .next-btn:last-child {
   width: 260px;
+  margin-right: 0;
 }
 
 .next-btn:hover {
@@ -927,14 +953,19 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .map {
-  position: relative;
   height: 416px;
   background: #e8e6dd url("../img/map.jpg") no-repeat center;
 }
 
+.contact-container {
+  position: relative;
+  width: 1160px;
+  margin: 0 auto;
+}
+
 .contact {
   position: absolute;
-  left: 140px;
+  left: 0;
   top: 52px;
   box-sizing: border-box;
   width: 319px;
@@ -1066,6 +1097,7 @@ input[type="checkbox"]:checked + label::after {
 
 .form-message {
   position: absolute;
+  display: none;
   bottom: 180px;
   right: 50%;
   margin-right: -475px;
