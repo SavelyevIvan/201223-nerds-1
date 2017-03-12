@@ -23,12 +23,11 @@ h2 {
 
 .btn {
   display: block;
-  padding: 18px 0;
+  padding: 16px 0;
   font-family: "Roboto";
   font-size: 16px;
   line-height: 18px;
   color: #ffffff;
-  font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
@@ -73,7 +72,7 @@ h2 {
 }
 
 .main-header {
-  padding-top: 50px;
+  padding-top: 47px;
   background: #eeeeee;
 }
 
@@ -97,7 +96,7 @@ h2 {
 .logo-menu-link {
   display: inline-block;
   vertical-align: middle;
-  padding-right: 175px;
+  margin-right: 179px;
   width: 160px;
   height: 65px;
 }
@@ -115,6 +114,7 @@ h2 {
   vertical-align: middle;
   margin: 0;
   padding: 0;
+  padding-top: 18px;
   list-style: none;
 }
 
@@ -135,12 +135,12 @@ h2 {
 
 .menu-item {
   display: inline-block;
+  padding: 10px 23px;
 }
 
 .menu-link{
   display: block;
   margin: 0;
-  padding: 10px 25px;
   color: #000000;
   font-size: 16px;
   line-height: 30px;
@@ -161,15 +161,13 @@ h2 {
 .basket {
   float: right;
   text-align: right;
-  width: 130px;
-  padding-top: 18px;
+  padding-top: 28px;
   font-size: 16px;
 }
 
 .cart {
   display: block;
   position: relative;
-  width: 130px;
   margin: 0;
   padding: 0;
   color: #000000;
@@ -193,7 +191,7 @@ h2 {
   width: 15px;
   height: 15px;
   top: 50%;
-  left: 0;
+  left: -33px;
   transform: translate(-50%, -50%);
   background: url("../img/spritesheet.png") no-repeat;
   background-position: -5px -5px;
@@ -214,36 +212,45 @@ h2 {
 
 .slider input[type=radio] {
   position: absolute;
-  opacity:0;
+  opacity: 0;
 }
 
 .slider-controls{
   position: absolute;
+  font-size: 0;
   bottom: 95px;
-  left: 50%;
+  left: 50.8%;
   width: 200px;
-  height: 10px;
+  height: 16px;
   margin-left: -100px;
-  text-align:center;
+  text-align: center;
   z-index: 1000;
 }
 
 .slider-controls label{
-    display:inline-block;
-    width:4px;
-    height:4px;
-    margin:0 3px;
-    background:white;
-    border: 5px solid white;
-    vertical-align:top;
-    border-radius:50%;
-    cursor:pointer;
+  position: relative;
+  display:inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 17px;
+  background: white;
+  vertical-align: top;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-#btn-1:checked ~ .slider-controls label[for="btn-1"],
-#btn-2:checked ~ .slider-controls label[for="btn-2"],
-#btn-3:checked ~ .slider-controls label[for="btn-3"] {
-    background:#c1c1c1;
+#btn-1:checked ~ .slider-controls label[for="btn-1"]::after,
+#btn-2:checked ~ .slider-controls label[for="btn-2"]::after,
+#btn-3:checked ~ .slider-controls label[for="btn-3"]::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 4px;
+  height: 4px;
+  background: #ffffff;
+  border: 2px solid #c1c1c1;
+  border-radius: 50%;
 }
 
 .slide{
@@ -253,7 +260,7 @@ h2 {
 
 .slide p {
   margin: 0;
-  padding-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .slide-text1 {
@@ -281,7 +288,7 @@ h2 {
 
 .slide-title {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
   font-size: 55px;
   line-height: 55px;
   font-weight: bold;
@@ -289,7 +296,7 @@ h2 {
 
 .slide:nth-child(1){
   background: #eeeeee url("../img/slide1.png") no-repeat;
-  background-position: 100% 17px;
+  background-position: 93% 18px;
 }
 
 .slide:nth-child(2){
@@ -305,7 +312,7 @@ h2 {
     display:none;
 }
 
-.slide:nth-child(1){
+.slide:nth-child(){
     display:block;
 
 }
@@ -333,10 +340,39 @@ h2 {
   box-shadow: inset 0 3px 0 0 #c13135;
 }
 
+.features {
+  padding-top: 82px;
+  padding-bottom: 78px;
+}
+
+.features-item {
+  float: left;
+  width: 300px;
+  margin-right: 100px;
+}
+
+.features-item:last-child {
+  margin-right: 0;
+}
+
+.features-img {
+  margin-bottom: 17px;
+}
+
+.features-name {
+  margin: 0;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.features-text {
+  width: 260px;
+  margin: 0;
+  padding-bottom: 35px;
+}
+
 .btn-features {
   width: 160px;
-  padding: 18px 0;
-  text-align: center;
 }
 
 .btn-features-1:hover {
@@ -377,63 +413,33 @@ h2 {
   box-shadow: inset 0 3px 0 0 #ce961f;
 }
 
-.features {
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
-.features-item {
-  float: left;
-  width: 300px;
-  margin-right: 100px;
-}
-
-.features-img {
-  padding-bottom: 25px;
-}
-
-.features-name {
-  margin: 0;
-  padding-bottom: 25px;
-}
-
-.features-text {
-  width: 260px;
-  margin: 0;
-  padding-bottom: 35px;
-}
-
-.features-item:last-child {
-  margin-right: 0;
-}
-
 .content {
-  padding-bottom: 75px;
+  padding-bottom: 51px;
   border-top: 2px solid #eeeeee;
 }
 
 .content-left {
   float: left;
-  padding-top: 80px;
+  padding-top: 74px;
   width: 660px;
 }
 
 .content-left-fragment {
   display: block;
-  padding-bottom: 35px;
+  margin-bottom: 33px;
   font-size: 45px;
   line-height: 45px;
 }
 
 .content-left-paragraph {
   margin: 0;
-  padding-bottom: 45px;
+  margin-bottom: 39px;
   font-size: 16px;
 }
 
 .content-left-title {
-  padding-bottom: 35px;
   margin: 0;
+  margin-bottom: 25px;
   color: #000000;
   font-weight: bold;
   text-transform: uppercase;
@@ -447,8 +453,8 @@ h2 {
 
 .content-left-list li {
   position: relative;
-  padding-left: 40px;
-  padding-bottom: 35px;
+  padding-left: 36px;
+  margin-bottom: 23px;
 }
 
 .content-left-list li:last-child {
@@ -473,12 +479,12 @@ h2 {
 }
 
 .content-right-img {
-  padding-bottom: 41px;
+  margin-bottom: 29px;
 }
 
 .content-right-title {
   text-align: center;
-  padding-bottom: 50px;
+  padding-bottom: 41px;
   margin: 0;
   color: #000000;
   font-weight: bold;
@@ -489,18 +495,23 @@ h2 {
   margin: 0;
   padding: 0;
   list-style: none;
+  font-size: 0;
 }
 
 .list-item {
   float: left;
   width: 110px;
-  padding-right: 10px;
+  margin-right: 9px;
+}
+
+.list-item:last-child {
+  margin-right: 0;
 }
 
 .figure {
   position: relative;
-  display: block;
-  padding-bottom: 25px;
+  display: inline-block;
+  margin-bottom: 19px;
   font-size: 45px;
   line-height: 45px;
   font-weight: bold;
@@ -508,48 +519,55 @@ h2 {
 
 .figure::after {
   position: absolute;
+  top: 1px;
+  right: -21px;
   content: "\0025";
   width: 20px;
   height: 20px;
   font-family: "Roboto";
-  font-size: 45px;
-  line-height: 45px;
+  font-size: 24px;
+  line-height: 24px;
   color: #283136;
   font-weight: bold;
 
 }
 
 .criterion {
-  float: left;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 18px;
 }
 
 .logos {
   width: 1160px;
-  margin-bottom: 80px;
+  margin-bottom: 81px;
   border-top: 2px solid #eeeeee;
   border-bottom: 2px solid #eeeeee;
 }
 
-.logo {
+.logos-item {
   position: relative;
   float: left;
-  width: 280px;
-  margin-right: 10px;
+  width: 290px;
   height: 180px;
-  background: white url("../img/map.jpg") no-repeat center;
-  opacity: 0.2;
-
 }
 
-.logo::before {
+.logos-item::before {
   content: "";
   position: absolute;
-  right: -5px;
+  right: 0;
   top: 64px;
   width: 2px;
   height: 52px;
   background: #eeeeee;
   opacity: 1;
+}
+
+.logo {
+  float: left;
+  background: white url("../img/map.jpg") no-repeat center;
+  opacity: 0.2;
+
 }
 
 .htmlacademy {
@@ -978,13 +996,13 @@ input[type="checkbox"]:checked + label::after {
   line-height: 30px;
   text-transform: uppercase;
   margin: 0;
-  padding-bottom: 30px;
+  margin-bottom: 23px;
 }
 
 .contact-text {
   margin: 0;
   padding: 0;
-  padding-bottom: 19px;
+  margin-bottom: 17px;
   font-size: 16px;
   line-height: 18px;
   color: #666666;
